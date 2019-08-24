@@ -42,13 +42,13 @@ public class Card extends ImageView {
 	private boolean facedUp = false;
 	private Image imageFacedUp;
 	private Image imageFacedDown;
-	private String spriteBack = "Resources/Cards/Simple/backBlue.png";
-	private String tiledCards = "Resources/SpriteSheets/classic_13x4x560x780.png";
+	private String spriteBack = "Resources/backBlue.png";
+	private String tiledCards = "Resources/classic_13x4x560x780.png";
 
 	public Card(int value, Suit suit) throws FileNotFoundException  {
 		this.value = value;
 		this.suit= suit;
-		String sprite = "Resources/Cards/Simple/" + suit.getSign() + value + ".png";
+		String sprite = "Resources/" + suit.getSign() + value + ".png";
 		setFitHeight(200);
 		setPreserveRatio(true);
 		imageFacedUp = new Image(new FileInputStream(sprite));
